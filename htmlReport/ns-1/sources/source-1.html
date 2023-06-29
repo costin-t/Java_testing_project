@@ -1,0 +1,241 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > BubbleSort</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: BubbleSort (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BubbleSort</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/9)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;public class Main {
+&nbsp;    public static void main(String[] args) {
+&nbsp;        Calculator calculator = new Calculator();
+&nbsp;        int sum = calculator.add(1, 5);
+&nbsp;        System.out.println(sum);
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;// Calculator for testing with Junit
+&nbsp;class Calculator {
+&nbsp;    public int add(int a, int b) {
+&nbsp;        return a + b;
+&nbsp;    }
+&nbsp;    public int subtract(int a, int b) {
+&nbsp;        return a - b;
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;class Login {
+&nbsp;    public String age(int age) {
+&nbsp;        if (age &gt;= 18 &amp;&amp; age &lt;=120) {
+&nbsp;            return &quot;You are logged in.&quot;;
+&nbsp;        }   else if (age&gt; 120) {
+&nbsp;            return &quot;the value is not correct&quot;;
+&nbsp;        }
+&nbsp;        else {
+&nbsp;            return &quot;Sorry, you must be 18 or older to log in.&quot;;
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;class BubbleSort {</b>
+&nbsp;    public static int[] bubbleSort(int[] arr) {
+<b class="nc">&nbsp;        int n = arr.length;</b>
+<b class="nc">&nbsp;        for (int i = 0; i &lt; n - 1; i++) {</b>
+<b class="nc">&nbsp;            for (int j = 0; j &lt; n - i - 1; j++) {</b>
+<b class="nc">&nbsp;                if (arr[j] &gt; arr[j + 1]) {</b>
+&nbsp;                    // swap arr[j] and arr[j+1]
+<b class="nc">&nbsp;                    int temp = arr[j];</b>
+<b class="nc">&nbsp;                    arr[j] = arr[j + 1];</b>
+<b class="nc">&nbsp;                    arr[j + 1] = temp;</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return arr;</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;//Directional Graph
+&nbsp;/*
+&nbsp;    Start
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Loop through each element i in array from 0 to n-1
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Loop through each element j in array from 0 to n-i-1
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Compare element at index j and j+1
+&nbsp;        |
+&nbsp;        v
+&nbsp;        If element at index j is greater than element at index j+1
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Swap element at index j with element at index j+1
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Continue loop until all elements are compared and swapped
+&nbsp;        |
+&nbsp;        v
+&nbsp;        Return the sorted array
+&nbsp;        |
+&nbsp;        v
+&nbsp;      //End
+&nbsp;        */
+&nbsp;
+&nbsp;
+&nbsp;//Coverage // testing the bigger number.
+&nbsp;class bignumber {
+&nbsp;    public String bignumber_method(int nr1, int nr2, int nr3 ){
+&nbsp;        if(nr1 &gt;= nr2  &amp;&amp; nr1 &gt;= nr3) {
+&nbsp;            return &quot;Number 1 is the biggest&quot;;
+&nbsp;        } else if ( nr2 &gt;= nr3 &amp;&amp; nr2 &gt;= nr1) {
+&nbsp;            return &quot;Number 2 is the biggest&quot;;
+&nbsp;        } else {
+&nbsp;            return &quot;Number 3 is the biggest&quot;;
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;
+&nbsp;//Acesta functie calculeaza suma totala care trebuie sa ii vina la final de luna unui angajat.
+&nbsp;class salary_for_month {
+&nbsp;    //baza reprezentant salariul de baza
+&nbsp;    //dayworked reprezinta zilele lucrate de catre angajat
+&nbsp;    //bonus se refera la diferitele bonusuri salariale
+&nbsp;    public int salary(int baza, int daywork, int year_exp, int hours) {
+&nbsp;        
+&nbsp;        boolean partime = false;
+&nbsp;        int bonus = 0;
+&nbsp;        int salary = 0;
+&nbsp;
+&nbsp;        if (hours &lt; 8) {
+&nbsp;            partime = true;
+&nbsp;        }
+&nbsp;        
+&nbsp;        if (partime== true &amp;&amp; daywork &gt; 15) {
+&nbsp;            bonus = bonus + 100;
+&nbsp;        }
+&nbsp;        if (partime == true &amp;&amp; daywork &gt; 30 &amp;&amp; year_exp &gt;= 1 ){
+&nbsp;            bonus = bonus + 150;
+&nbsp;        }
+&nbsp;        
+&nbsp;        if (partime == false) {
+&nbsp;            for (int i = 0; i &lt;year_exp; i++){
+&nbsp;                bonus = bonus + 200;
+&nbsp;            }
+&nbsp;        }
+&nbsp;        if (partime == false){
+&nbsp;            if (daywork &gt;= 15 &amp;&amp; daywork &lt;= 19){
+&nbsp;                bonus = bonus + 500;
+&nbsp;            }
+&nbsp;            else if(daywork &gt;= 20 &amp;&amp; daywork &lt; 25) {
+&nbsp;                bonus = bonus + 600;
+&nbsp;            } 
+&nbsp;            else if(daywork &gt;= 25){
+&nbsp;                bonus = bonus + 900;
+&nbsp;            }
+&nbsp;        }
+&nbsp;        salary = baza + bonus;
+&nbsp;        return salary;
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-04 03:55</div>
+</div>
+</body>
+</html>
